@@ -9,10 +9,10 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 public class FileCache extends MaBase {
-    public Map<File, String> fileCache = new HashMap<>();
-    public Map<String, String> resourceCache = new HashMap<>();
+    private static Map<File, String> fileCache = new HashMap<>();
+    private static Map<String, String> resourceCache = new HashMap<>();
 
-    public void cache(File file) {
+    public static void cache(File file) {
         String content = null;
         try {
              content = MaFileUtil.readFile(file);
@@ -26,7 +26,7 @@ public class FileCache extends MaBase {
         fileCache.put(file, content);
     }
 
-    public void cache(String resourcePath) {
+    public static void cache(String resourcePath) {
         String content = null;
         try {
             content = MaFileUtil.readResource(resourcePath);
@@ -40,19 +40,27 @@ public class FileCache extends MaBase {
         resourceCache.put(resourcePath, content);
     }
 
-    public String getCachedContent(File file) {
+    public static void cache(String resourcePath, String content) {
+        resourceCache.put(resourcePath, content);
+    }
+
+    public static void cache(File file, String content) {
+        fileCache.put(file, content);
+    }
+
+    public static String getCachedContent(File file) {
         return fileCache.get(file);
     }
 
-    public String getCachedContent(String resourcePath) {
+    public static String getCachedContent(String resourcePath) {
         return resourceCache.get(resourcePath);
     }
 
-    public Map<File, String> getFileCache() {
+    public static Map<File, String> getFileCache() {
         return fileCache;
     }
 
-    public Map<String, String> getResourceCache() {
+    public static Map<String, String> getResourceCache() {
         return resourceCache;
     }
 }

@@ -1,0 +1,66 @@
+{
+  "first_name": {
+    "female": [
+      "Tamara", "Samara", "Lilja",  "Alice", "Matilda", "Katrina", "Teolinda", "Elena"
+    ],
+
+    "male": [
+      "Barnaby", "Kirk", "Sebastian", "Alexander", "Lucifer", "Marvin", "Albert", "Balder", "Boris", "Harald"
+    ],
+
+    "other": [
+
+    ]
+  },
+
+  "last_name": [
+    [
+      "Koppar", "Silver", "Guld", "Zink", "Platina", "Titan", "Stål", "Tenn", "Bly", "Mässing", "Järn"
+    ],
+
+    [
+      "Spets", "Sporre", "Vind", "Storm", "Orkan", "Moln", "Fjäder", "Vinge", "Sjungare", "Stjärna", "Himmel", "Flaxa"
+    ]
+  ],
+
+  "title": {
+    "prefix": [
+      {
+        "name": "Professor",
+        "chance": -6,
+        "base_stat": "intelligence",
+        "increase": 3
+      },
+
+      {
+        "name": "Skeppsingenjör",
+        "chance": 0,
+        "base_stat": "intelligence",
+        "increase": 5
+      },
+
+      {
+        "name": "Uppfinnare",
+        "chance": -3,
+        "base_stat": "intelligence",
+        "increase": 3
+      },
+
+      {
+        "name": "Stridsmagiker",
+        "chance": -5,
+        "base_stat": "will",
+        "increase": 5
+      }
+    ],
+
+    "suffix": [
+      {
+        "name": "Den Vise",
+        "chance": -55,
+        "base_stat": "intelligence",
+        "increase": 20
+      }
+    ]
+  }
+}
